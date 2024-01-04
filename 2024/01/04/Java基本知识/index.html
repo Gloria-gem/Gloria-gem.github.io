@@ -23,20 +23,21 @@
         border-left-color: #6d6d6d;    /*左边框颜色*/
     }
   </style>
-  <meta name="description" content="第八章 多线程1.线程创建两种方法 extends Thread 123456789101112131415&#x2F;&#x2F;声明线程时声明类即可public class TestThread1 extends   Thread&#123;    @Override    public void run() &#123;        for (int i &#x3D; 0; i &lt; 20; i++) &amp;#12">
+  <meta name="description" content="第八章 多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基本知识">
 <meta property="og:url" content="http://example.com/2024/01/04/Java%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第八章 多线程1.线程创建两种方法 extends Thread 123456789101112131415&#x2F;&#x2F;声明线程时声明类即可public class TestThread1 extends   Thread&#123;    @Override    public void run() &#123;        for (int i &#x3D; 0; i &lt; 20; i++) &amp;#12">
+<meta property="og:description" content="第八章 多线程">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2024/01/04/Java%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6.jpg">
 <meta property="og:image" content="http://example.com/2024/01/04/Java%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/2c13961f42591da7ec39996dfc886bc3.png">
 <meta property="og:image" content="http://example.com/2024/01/04/Java%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/1688578-20190610231249524-1787557538.png">
 <meta property="og:image" content="http://example.com/2024/01/04/Java%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/image-20240104125222546.png">
 <meta property="article:published_time" content="2024-01-04T06:00:13.000Z">
-<meta property="article:modified_time" content="2024-01-04T06:00:47.337Z">
+<meta property="article:modified_time" content="2024-01-04T06:15:48.537Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/01/04/Java%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6.jpg">
   
@@ -197,11 +198,11 @@
       
         <hr>
 <hr>
-<h2 id="第八章-多线程"><a href="#第八章-多线程" class="headerlink" title="第八章 多线程"></a>第八章 多线程</h2><h3 id="1-线程创建两种方法"><a href="#1-线程创建两种方法" class="headerlink" title="1.线程创建两种方法"></a>1.线程创建两种方法</h3><ul>
+<h2 id="第八章-多线程"><a href="#第八章-多线程" class="headerlink" title="第八章 多线程"></a>第八章 多线程</h2><span id="more"></span>
+
+<h3 id="1-线程创建两种方法"><a href="#1-线程创建两种方法" class="headerlink" title="1.线程创建两种方法"></a>1.线程创建两种方法</h3><ul>
 <li><p>extends Thread</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明线程时声明类即可</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestThread1</span> <span class="keyword">extends</span>   <span class="title class_">Thread</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;执行了run方法&quot;</span>+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TestThread1</span> <span class="variable">testThread1</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">TestThread1</span>();</span><br><span class="line">        <span class="comment">//调用线程，用的是start方法</span></span><br><span class="line">        testThread1.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明线程时声明类即可</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestThread1</span> <span class="keyword">extends</span>   <span class="title class_">Thread</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;执行了run方法&quot;</span>+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TestThread1</span> <span class="variable">testThread1</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">TestThread1</span>();</span><br><span class="line">        <span class="comment">//调用线程，用的是start方法</span></span><br><span class="line">        testThread1.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>implements Runnable</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">////声明线程时声明类即可要声明Thread（代理模式）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestThread2</span> <span class="keyword">implements</span>  <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;执行了run方法&quot;</span>+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TestThread2</span> <span class="variable">testThread2</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">TestThread2</span>();</span><br><span class="line">        <span class="comment">//调用线程，用的是start方法</span></span><br><span class="line">       <span class="comment">//new 一个Thread方法去进行线程模式，在这里用了代理模式</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(testThread2,<span class="string">&#x27;name&#x27;</span>).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -380,6 +381,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -602,6 +614,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">photo试验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
             
             <div class="clearfix"></div>
